@@ -6,7 +6,7 @@
 ## Documentation
 View the full API documentation here: [Restful Booker API Documentation](https://documenter.getpostman.com/view/52307578/2sBXcKBHyz)
 ## Test Report
-View the Newman HTML test report: [Test Report](file:///C:/Users/ezeth/Documents/API%20testing/PROJECTS/Restful-Booker/newman/Restful-Booker-Newman-Test-Report.html)
+View the Newman HTML test report: [Test Report](https://github.com/ezethufokazi/Restful-Booker-API-Testing/blob/main/Restful-Booker/Restful-Booker-Newman-Test-Report.html)
 
 ---
 
