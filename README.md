@@ -1,12 +1,11 @@
 # Restful Booker API Testing Project
 
 **Author:** Ezethu Fokazi  
-**Tool:** Postman  
+**Tool:** Postman, Newman  
 **Project Type:** API Testing Portfolio Project
+
 ## Documentation
 View the full API documentation here: [Restful Booker API Documentation](https://documenter.getpostman.com/view/52307578/2sBXcKBHyz)
-## Test Report
-View the Newman HTML test report: [Test Report](https://ezethufokazi.github.io/Restful-Booker-API-Testing/Restful-Booker/Restful-Booker-Newman-Test-Report.html)
 
 ---
 
@@ -21,6 +20,7 @@ The Restful Booker API simulates a hotel booking system with endpoints for creat
 ## Tools Used
 
 - **Postman** — API testing and test script execution
+- **Newman** — command line collection runner and HTML report generation
 - **JavaScript** — Test assertions and pre/post request scripts
 - **GitHub** — Version control and portfolio hosting
 
@@ -35,8 +35,8 @@ Restful-Booker Collection
 ├── Bookings
 │   ├── Create Booking
 │   ├── Get All Bookings
-│   ├── Get Booking by name
-│   ├── Get Booking by check in/check out date
+│   ├── Get Booking by Name
+│   ├── Get Booking by Check In/Check Out Date
 │   ├── Get Booking by ID
 │   ├── Update Booking
 │   ├── Partial Update Booking
@@ -110,9 +110,10 @@ Six bugs were identified and documented during testing:
 
 **Prerequisites**
 - Postman installed on your machine
+- Node.js installed on your machine
 - Download the collection and environment files from this repository
 
-**Steps**
+**Running in Postman**
 1. Open Postman
 2. Click **Import** and import both the collection and environment files
 3. Select the **RestfulBooker** environment from the top right dropdown
@@ -120,6 +121,14 @@ Six bugs were identified and documented during testing:
 5. Select the **Restful-Booker** collection
 6. Make sure the request order is correct (Auth and Create Booking must run first)
 7. Click **Run Restful-Booker**
+
+**Running with Newman**
+1. Install Newman: `npm install -g newman`
+2. Install HTML reporter: `npm install -g newman-reporter-htmlextra`
+3. Run the collection:
+```
+newman run collection.json -e environment.json -r htmlextra
+```
 
 **Important Note**  
 Restful Booker runs on a shared public server that resets periodically. Always run Auth and Create Booking first to ensure fresh test data exists before running the rest of the collection.
@@ -136,3 +145,4 @@ Restful Booker runs on a shared public server that resets periodically. Always r
 - Understanding of HTTP methods, status codes, headers and authentication
 - Difference between token based auth (Cookie) and Basic Auth
 - Importance of test execution order in API testing
+- Generating HTML test reports using Newman
